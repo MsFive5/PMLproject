@@ -1,0 +1,19 @@
+Practical Machine Learning class project
+========================================================
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring web pages (click the **Help** toolbar button for more details on using R Markdown).
+
+```{r}
+library(caret)
+library(randomForest)
+setwd("/Users/xiaoxuwu/Documents/coursera/PML")
+training <- read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv")
+randomForest(classe~roll_belt+pitch_belt+pitch_belt+gyros_belt_x+gyros_belt_y+gyros_belt_z+accel_belt_x+accel_belt_y+accel_belt_z+magnet_belt_x+magnet_belt_y+magnet_belt_z,data=training)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+
